@@ -18,8 +18,8 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
-var src_exports = {};
-__export(src_exports, {
+var index_exports = {};
+__export(index_exports, {
   AgendaUtils: () => AgendaUtils,
   DataUtils: () => DataUtils,
   LoginUsuario: () => LoginUsuario,
@@ -31,7 +31,7 @@ __export(src_exports, {
   profissionais: () => profissionais_default,
   servicos: () => servicos_default
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(index_exports);
 
 // src/constants/clientes.ts
 var clientes = [

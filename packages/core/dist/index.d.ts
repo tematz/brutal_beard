@@ -16,20 +16,6 @@ interface Servico {
     imagemURL: string;
 }
 
-interface Usuario$1 {
-    id?: number;
-    nome: string;
-    email: string;
-    senha?: string;
-    telefone?: string;
-    barbeiro?: boolean;
-}
-
-interface ProvedorCriptografia {
-    criptografar(senha: string): Promise<string>;
-    comparar(senha: string, senhaCriptografada: string): Promise<boolean>;
-}
-
 interface Usuario {
     id?: number;
     nome: string;
@@ -44,18 +30,23 @@ interface RepositorioUsuario {
     buscarPorEmail(email: string): Promise<Usuario>;
 }
 
+interface ProvedorCriptografia {
+    criptografar(senha: string): Promise<string>;
+    comparar(senha: string, senhaCriptografada: string): Promise<boolean>;
+}
+
 declare class LoginUsuario {
     private readonly repo;
     private readonly cripto;
     constructor(repo: RepositorioUsuario, cripto: ProvedorCriptografia);
-    executar(email: string, senha: string): Promise<Usuario$1 | null>;
+    executar(email: string, senha: string): Promise<Usuario | null>;
 }
 
 declare class RegistrarUsuario {
     private readonly repo;
     private readonly cripto;
     constructor(repo: RepositorioUsuario, cripto: ProvedorCriptografia);
-    executar(usuario: Usuario$1): Promise<void>;
+    executar(usuario: Usuario): Promise<void>;
 }
 
 interface Agendamento {

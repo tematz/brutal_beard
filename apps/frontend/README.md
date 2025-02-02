@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Barbershop Scheduling System
 
-## Getting Started
+## Description
 
-First, run the development server:
+A complete solution for scheduling appointments in barbershops, integrating a web interface, a robust API, and a mobile application. It allows online appointment booking, service management, and mobile access.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Online Scheduling:** Real-time appointment booking.
+- **Service and Staff Management:** Registration and control of services and professionals.
+- **Mobile Integration:** An app for checking and managing appointments.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Turborepo:** Monorepo management for organizing modules (web, API, and mobile).
+- **Next.js:** Responsive web interface.
+- **NestJS:** Scalable and modular API.
+- **React Native:** Native mobile application.
+- **Prisma ORM:** Database management and migrations.
 
-## Learn More
+## Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js (LTS version)
+- npm or yarn
+- React Native environment (Android Studio/Xcode)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation and Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the repository:**
 
-## Deploy on Vercel
+   ```bash
+   git clone https://github.com/your-username/brutal_beard.git
+   cd brutal_beard
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Database Setup:**
+
+   - Update the `.env` file with your credentials.
+   - Run Prisma migrations:
+
+     ```bash
+     npx prisma migrate dev
+     ```
+
+4. **Running the Application:**
+
+   - **API (NestJS):**
+
+     ```bash
+     cd apps/backend
+     npm run start:dev
+     ```
+
+   - **Frontend (Next.js):**
+
+     ```bash
+     cd apps/frontend
+     npm run dev
+     ```
+
+   - **Mobile (React Native):**
+
+     ```bash
+     cd apps/mobile
+     npx react-native run-android  # for Android
+     npx react-native run-ios      # for iOS
+     ```
+
+## Contribution
+
+Contributions are welcome. To contribute:
+
+1. Fork the project.
+2. Create a branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes.
+4. Push your branch (`git push origin feature/your-feature-name`) and open a Pull Request.
+
+## Contact
+
+For questions or suggestions, contact: [matvno@gmail.com](mailto:matvno@gmail.com)
+
+---
